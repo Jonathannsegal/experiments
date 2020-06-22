@@ -1,5 +1,5 @@
 # miscellaneous
-🌌🥁🥨 A collection of random repositories that are not interesting enough to have their own repo 🦉🛫🧪
+🌌🥁🥨 A monorepo of fun experiments that I made 🦉🛫🧪
 
 # Table of Contents
 
