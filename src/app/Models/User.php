@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 // use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -15,6 +15,10 @@ class User extends Eloquent implements AuthenticatableContract
     use AuthenticableTrait;
     use Notifiable;
 
+    public function viewedSheets() {
+        return \App\Models\Sheet::whereIn('_id', $this->viewed_sheets)->get();
+    }
+
     protected $connection = 'mongodb';
 
     /**
@@ -23,7 +27,7 @@ class User extends Eloquent implements AuthenticatableContract
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'viewed_sheets'
     ];
 
     /**
