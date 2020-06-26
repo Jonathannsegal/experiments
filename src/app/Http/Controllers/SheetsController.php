@@ -14,10 +14,10 @@
             $this->middleware('auth');
         }
 
-        public function newSheet()
+        public function newSheet($name)
         {
             $sheet = Sheet::create([
-                'name' => 'Untitled spreadsheet',
+                'name' => $name,
                 '_owner' => Auth::user()->_id,
                 'content' => [[]]
             ]);

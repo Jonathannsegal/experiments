@@ -9,10 +9,10 @@
 
                     <div class="card-body">
                         <div class="text-center">
-                            <a class="btn btn-lg btn-primary" href="{{ route('sheets.new') }}">Create new spreadsheet</a>
+                            <a class="btn btn-lg btn-primary" href="/sheets/new/{{ "Sheet" }}">Create new spreadsheet</a>
                         </div>
 
-                        <div class="list-group">
+                        <div class="list-group" style="margin-top: 1em">
                             @if($sheets = \Auth::user()->viewedSheets())
                                 @foreach($sheets as $sheet)
                                         <a href="/sheets/{{ $sheet->_id }}" class="list-group-item">
